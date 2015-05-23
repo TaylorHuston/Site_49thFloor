@@ -17,8 +17,6 @@ nav ul li a {
     
 }
 
-
-
 #start {
     background-image: url('../img/background-light-texture.jpg');
 }
@@ -43,7 +41,7 @@ nav ul li a {
     color: white;
 }
 
-@media (min-width: 800px) and (orientation: landscape) {
+@media (min-width: 595px) {
  nav ul li a:hover {    
     background-color: hsl(0, 35%, 43%);
     color: hsl(0, 0%, 100%);

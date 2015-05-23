@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,700italic,500italic,400italic);
 
+@media all {
 * {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -132,7 +132,7 @@ p {
     bottom: 0;
     margin: 0 auto;
     width: 50vw;
-    max-width: 900px;
+    max-width: 700px;
 }
 
 .sectionTitle {
@@ -142,7 +142,6 @@ p {
     font-size: 28px;
     font-style: italic;
 }
-
 
 #intro {
     display: block;
@@ -174,17 +173,20 @@ p {
     box-shadow: 0 0 20px 5px rgb(33, 33, 33);
 }
 
+}
 
-@media all and (min-width: 595px) and (orientation: landscape) {
+@media all and (min-width: 595px) {
 nav {
     position: fixed;
-    height: 75px;   
+    height: 65px;   
 }
     
 #headline {
     float: left;
-    width: 30%; 
-    padding-top: 20px;
+    width: 35%; 
+    padding-top: 14px;
+    
+    font-size: 22px;
 }
 
 nav ul {
@@ -192,7 +194,7 @@ nav ul {
     margin: 0;
     
     padding: 0;
-    width: 70%;
+    width: 65%;
     max-width: 800px;
     
     list-style-type: none;
@@ -204,7 +206,7 @@ nav ul li {
     margin: 0;
     
     width: 20%;
-    height: 75px;
+    height: 65px;
     padding: 0;
 }    
 
@@ -213,16 +215,16 @@ nav ul li a {
  
     width: 100%;
     min-width: 80px;
-    height: 75px;
-    padding: 20px 0px;
+    height: 65px;
+    padding: 18px 0px;
+    
+    font-size: 15px;
     
     border-bottom-width: 0px;
-    
 }
 
 nav ul li a:hover {        
     border-bottom-width: 3px;
-
 }
 
 section {
@@ -239,6 +241,46 @@ section {
 
 #tagline h2 {
     font-size: 4vw;
+}
+
+    
+}
+
+@media all and (min-width: 1200px) {
+nav {
+    position: fixed;
+    height: 75px;   
+}
+    
+#headline {
+    float: left;
+    width: 35%; 
+    padding-top: 10px;
+    
+    font-size: 35px;
+}
+    
+nav ul li a {
+    height: 75px;
+    padding: 20px 0px;
+    
+    font-size: 20px;
+}
+    
+section {
+    position: relative;
+    z-index: 100;    
+
+    min-height: 600px;
+    padding: 75px 1vw;
+}    
+
+#tagline h1 {
+    font-size: 70px;
+}
+
+#tagline h2 {
+    font-size: 40px;
 }
 
     
