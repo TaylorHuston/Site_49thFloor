@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/TaylorHuston/Site_49thFloor/issues"
   },
-  "homepage": "https://github.com/TaylorHuston/Site_49thFloor#readme"
+  "homepage": "https://github.com/TaylorHuston/Site_49thFloor#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
