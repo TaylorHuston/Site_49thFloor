@@ -1,0 +1,18 @@
+{
+  "name": "49thfloor",
+  "version": "1.0.0",
+  "description": "The website for my freelance web design business",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaylorHuston/Site_49thFloor.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TaylorHuston/Site_49thFloor/issues"
+  },
+  "homepage": "https://github.com/TaylorHuston/Site_49thFloor#readme"
+}
