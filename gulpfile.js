@@ -12,6 +12,13 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
+//Copy
+gulp.task('copy', function() {
+  gulp.src('src/**/*')
+    .pipe(gulp.dest('public/'));
+})
+
 gulp.task('watch', function() {
   gulp.watch('src/assets/js/**/*.js', ['jshint']);
+  gulp.watch('src/**/*',  ['copy']);
 });
