@@ -1,0 +1,21 @@
+{
+  "name": "teenytinycss",
+  "description": "A very tiny CSS layout framework",
+  "main": "",
+  "authors": [
+    "Taylor Huston"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TaylorHuston/teenytinyCSS",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-strings": "normalize#^1.0.4"
+  }
+}

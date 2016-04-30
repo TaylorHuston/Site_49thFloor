@@ -1,0 +1,31 @@
+{
+  "name": "teenytinycss",
+  "description": "A very tiny CSS layout framework",
+  "main": "",
+  "authors": [
+    "Taylor Huston"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TaylorHuston/teenytinyCSS",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-strings": "normalize#^1.0.4"
+  },
+  "_release": "5e0d94ba9f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5e0d94ba9f43e75ee0b059f950e978c5fac6da8a"
+  },
+  "_source": "https://github.com/TaylorHuston/teenytinyCSS.git",
+  "_target": "*",
+  "_originalSource": "teenytinycss",
+  "_direct": true
+}
