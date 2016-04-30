@@ -17,6 +17,8 @@
   "homepage": "https://github.com/TaylorHuston/Site_49thFloor#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-contrib-copy": "^0.1.2",
+    "gulp-copy": "0.0.2",
     "gulp-jshint": "^2.0.0",
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.1",

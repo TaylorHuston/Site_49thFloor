@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
+    copy = require('gulp-copy'),
     jshint = require('gulp-jshint');
 
 gulp.task('default', ['watch']);
@@ -14,7 +15,7 @@ gulp.task('jshint', function() {
 
 //Copy
 gulp.task('copy', function() {
-  gulp.src('src/**/*')
+   return gulp.src('src/**/*.*')
     .pipe(gulp.dest('public/'));
 })
 
