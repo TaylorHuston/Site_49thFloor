@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-strings": "normalize#^1.0.4"
+    "normalize-strings": "normalize#^1.0.4",
+    "normalize-css": "normalize.css#^4.1.1"
   }
 }

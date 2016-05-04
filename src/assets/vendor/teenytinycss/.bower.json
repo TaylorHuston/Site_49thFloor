@@ -16,13 +16,14 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-strings": "normalize#^1.0.4"
+    "normalize-strings": "normalize#^1.0.4",
+    "normalize-css": "normalize.css#^4.1.1"
   },
-  "_release": "5e0d94ba9f",
+  "_release": "608a1011ca",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "5e0d94ba9f43e75ee0b059f950e978c5fac6da8a"
+    "commit": "608a1011cab639b99f1f9e453724c5013fe936ae"
   },
   "_source": "https://github.com/TaylorHuston/teenytinyCSS.git",
   "_target": "*",
