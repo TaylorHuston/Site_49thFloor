@@ -11,7 +11,7 @@ Customize these as needed*****/
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: auto;
   margin: 0px auto;
 }
 
