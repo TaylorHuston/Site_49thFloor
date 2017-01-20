@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     copy = require('gulp-copy'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    fileinclude = require('gulp-file-include')
 
 gulp.task('default', ['watch']);
 
@@ -16,6 +17,13 @@ gulp.task('jshint', function() {
 //Copy
 gulp.task('copy', function() {
    return gulp.src('src/**/*.*')
+    .pipe(gulp.dest('public/'));
+})
+
+gulp.task('build', function() {
+  gulp
+    .src('src/index.html')
+    .pipe(fileinclude())
     .pipe(gulp.dest('public/'));
 })
 
