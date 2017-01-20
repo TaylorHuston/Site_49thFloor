@@ -29,14 +29,14 @@ gulp.task('clean', function () {
 })
 
 
-gulp.task('fileinclude', ['clean'],function () {
+gulp.task('fileinclude', ['clean'], function () {
   return gulp
     .src('src/index.html')
     .pipe(fileinclude())
     .pipe(gulp.dest('public/'));
 })
 
-gulp.task('build', ['clean','fileinclude'])
+gulp.task('build', ['clean', 'fileinclude'])
 
 gulp.task('watch', function () {
   gulp.watch('src/assets/js/**/*.js', ['jshint']);
