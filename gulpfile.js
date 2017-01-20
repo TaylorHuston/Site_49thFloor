@@ -22,12 +22,15 @@ gulp.task('clean', function () {
     .pipe(clean());
 })
 
-//Copy
-gulp.task('copy', function () {
-  return gulp.src('src/**/*.*')
-    .pipe(gulp.dest('public/'));
+gulp.task('copyCSS', ['clean'], function () {
+  return gulp.src('src/assets/css/*.css')
+    .pipe(prefix({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(concatCSS('bundle.css'))
+    .pipe(gulp.dest('public/assets/css'));
 })
-
 
 gulp.task('fileinclude', ['clean'], function () {
   return gulp
@@ -36,7 +39,7 @@ gulp.task('fileinclude', ['clean'], function () {
     .pipe(gulp.dest('public/'));
 })
 
-gulp.task('build', ['clean', 'fileinclude'])
+gulp.task('build', ['clean', 'fileinclude', 'copyCSS'])
 
 gulp.task('watch', function () {
   gulp.watch('src/assets/js/**/*.js', ['jshint']);
