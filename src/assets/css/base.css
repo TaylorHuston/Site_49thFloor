@@ -12,17 +12,7 @@
     line-height: 1.4;
     font-size: 16px;
   }
-  header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-  }
   #headline {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     display: block;
     height: 50px;
@@ -32,13 +22,14 @@
     font-size: 26px;
   }
   #hamburger {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50px;
-    -ms-flex: 0 0 50px;
-    flex: 0 0 50px;
+    position: fixed;
+    left: auto;
+    top: 5px;
+    right: 5px;
     width: 50px;
     height: 50px;
     text-align: center;
+    z-index: 999;
   }
   #hamburger span {
     display: block;
@@ -48,18 +39,21 @@
     border-radius: 5px;
   }
   nav {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: -100%;
     z-index: 200;
     margin: 0;
     padding: 0;
     width: 100%;
+    max-width: 600px;
+    height: 100%;
     text-align: center;
+    transition: all ease .3s;
   }
   nav.expand {
-    display: block;
+    right: 0;
   }
   nav ul {
     margin: 0;
@@ -165,44 +159,6 @@
 }
 
 @media all and (min-width: 695px) {
-  nav {
-    position: fixed;
-    height: 65px;
-  }
-  #headline {
-    float: left;
-    width: 35%;
-    padding-top: 14px;
-    font-size: 22px;
-  }
-  nav ul {
-    float: right;
-    margin: 0;
-    padding: 0;
-    width: 65%;
-    max-width: 800px;
-    list-style-type: none;
-  }
-  nav ul li {
-    display: block;
-    float: left;
-    margin: 0;
-    width: 20%;
-    height: 65px;
-    padding: 0;
-  }
-  nav ul li a {
-    display: block;
-    width: 100%;
-    min-width: 80px;
-    height: 65px;
-    padding: 18px 0px;
-    font-size: 15px;
-    border-bottom-width: 0px;
-  }
-  nav ul li a:hover {
-    border-bottom-width: 3px;
-  }
   section {
     position: relative;
     z-index: 100;
@@ -218,21 +174,6 @@
 }
 
 @media all and (min-width: 1200px) {
-  nav {
-    position: fixed;
-    height: 75px;
-  }
-  #headline {
-    float: left;
-    width: 35%;
-    padding-top: 10px;
-    font-size: 35px;
-  }
-  nav ul li a {
-    height: 75px;
-    padding: 20px 0px;
-    font-size: 20px;
-  }
   section {
     position: relative;
     z-index: 100;

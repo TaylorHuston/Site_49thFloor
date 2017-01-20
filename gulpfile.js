@@ -15,7 +15,8 @@ gulp.task('jshint', function () {
   return gulp
     .src('src/assets/js/**/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(gulp.dest('public/assets/js/'))
 });
 
 gulp.task('clean', function () {
@@ -51,5 +52,5 @@ gulp.task('build', ['clean', 'fileinclude', 'copyCSS', 'imageMin'])
 
 gulp.task('watch', function () {
   gulp.watch('src/assets/js/**/*.js', ['jshint']);
-  gulp.watch('src/**/*', ['copy']);
+  gulp.watch('src/**/*', ['build']);
 });
