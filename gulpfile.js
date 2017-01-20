@@ -17,15 +17,15 @@ gulp.task('jshint', function () {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
+gulp.task('clean', function () {
+  return gulp.src('public/')
+    .pipe(clean());
+})
+
 //Copy
 gulp.task('copy', function () {
   return gulp.src('src/**/*.*')
     .pipe(gulp.dest('public/'));
-})
-
-gulp.task('clean', function () {
-  return gulp.src('public/')
-    .pipe(clean());
 })
 
 
