@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   concatCSS = require('gulp-concat-css'),
   prefix = require('gulp-autoprefixer'),
   fileinclude = require('gulp-file-include')
+imageMin = require('gulp-imagemin');
 
 gulp.task('default', ['watch']);
 
@@ -39,7 +40,14 @@ gulp.task('fileinclude', ['clean'], function () {
     .pipe(gulp.dest('public/'));
 })
 
-gulp.task('build', ['clean', 'fileinclude', 'copyCSS'])
+gulp.task('imageMin', ['clean'], function () {
+  return gulp
+    .src('src/assets/img/*.*')
+    .pipe(gulp.dest('public/assets/img'));
+})
+
+
+gulp.task('build', ['clean', 'fileinclude', 'copyCSS', 'imageMin'])
 
 gulp.task('watch', function () {
   gulp.watch('src/assets/js/**/*.js', ['jshint']);
