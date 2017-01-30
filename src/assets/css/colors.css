@@ -1,53 +1,43 @@
 body,
 html {
-  color: hsl(0, 0%, 20%);
+  color: #333333;
   background-image: url('../img/dust.png');
 }
-
 nav {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #ffffff;
 }
-
 #headline {
-  color: hsl(0, 0%, 30%);
+  color: #4d4d4d;
 }
-
 #hamburger span {
-  background-color: hsl(0, 0%, 30%);
+  background-color: #4d4d4d;
 }
-
 nav ul li a {
-  color: hsl(0, 0%, 30%);
-  border-bottom-color: hsl(0, 100%, 30%);
+  color: #4d4d4d;
+  border-bottom-color: #990000;
 }
-
 #start {
   background-image: url('../img/background-light-texture.jpg');
 }
-
 #tagline {
   color: white;
 }
-
 #philosophy {
   background-image: url('../img/dustGrey.png');
   color: white;
 }
-
 #contact {
   background-image: url('../img/dustGrey.png');
   color: white;
 }
-
 #footer {
   background-image: url('../img/background-light-texture.jpg');
   color: white;
 }
-
 @media (min-width: 595px) {
   nav ul li a:hover {
-    background-color: hsl(0, 35%, 43%);
-    color: hsl(0, 0%, 100%);
-    border-bottom-color: hsl(0, 45%, 56%);
+    background-color: #944747;
+    color: #ffffff;
+    border-bottom-color: #c15c5c;
   }
 }

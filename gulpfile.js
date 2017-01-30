@@ -5,26 +5,25 @@ var gulp = require('gulp'),
   clean = require('gulp-clean'),
   concatCSS = require('gulp-concat-css'),
   prefix = require('gulp-autoprefixer'),
-  fileinclude = require('gulp-file-include')
-imageMin = require('gulp-imagemin');
+  fileinclude = require('gulp-file-include'),
+  imageMin = require('gulp-imagemin'),
+  less = require('gulp-less');
 
-gulp.task('default', ['watch']);
-
-//JShint
-gulp.task('jshint', ['clean'], function () {
-  return gulp
-    .src('src/assets/js/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(gulp.dest('public/assets/js/'))
-});
 
 gulp.task('clean', function () {
   return gulp.src('public/')
     .pipe(clean());
 })
 
-gulp.task('copyCSS', ['clean'], function () {
+gulp.task('jshint', ['clean'], function () {
+  return gulp
+    .src('src/assets/js/**/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(gulp.dest('public/assets/js/'))
+})
+
+gulp.task('copyCSS', ['clean', 'less'], function () {
   return gulp.src('src/assets/css/*.css')
     .pipe(prefix({
       browsers: ['last 2 versions'],
@@ -33,6 +32,14 @@ gulp.task('copyCSS', ['clean'], function () {
     .pipe(concatCSS('bundle.css'))
     .pipe(gulp.dest('public/assets/css'));
 })
+
+gulp.task('less', function () {
+  return gulp
+    .src('src/assets/css/*.less')
+    .pipe(less())
+    .pipe(gulp.dest('src/assets/css'))
+})
+
 
 gulp.task('fileinclude', ['clean'], function () {
   return gulp
@@ -48,8 +55,10 @@ gulp.task('imageMin', ['clean'], function () {
 })
 
 
-gulp.task('build', ['clean', 'fileinclude', 'copyCSS', 'imageMin', 'jshint'])
+gulp.task('build', ['fileinclude', 'copyCSS', 'imageMin', 'jshint'])
 
 gulp.task('watch', function () {
   gulp.watch('src/**/*', ['build']);
 });
+
+gulp.task('default', ['watch']);
