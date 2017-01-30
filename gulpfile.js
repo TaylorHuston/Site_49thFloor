@@ -11,7 +11,7 @@ imageMin = require('gulp-imagemin');
 gulp.task('default', ['watch']);
 
 //JShint
-gulp.task('jshint', function () {
+gulp.task('jshint', ['clean'], function () {
   return gulp
     .src('src/assets/js/**/*.js')
     .pipe(jshint())
@@ -48,9 +48,8 @@ gulp.task('imageMin', ['clean'], function () {
 })
 
 
-gulp.task('build', ['clean', 'fileinclude', 'copyCSS', 'imageMin'])
+gulp.task('build', ['clean', 'fileinclude', 'copyCSS', 'imageMin', 'jshint'])
 
 gulp.task('watch', function () {
-  gulp.watch('src/assets/js/**/*.js', ['jshint']);
   gulp.watch('src/**/*', ['build']);
 });
