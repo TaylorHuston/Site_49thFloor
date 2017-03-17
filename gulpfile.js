@@ -15,7 +15,7 @@ gulp.task('clean', function () {
     .pipe(clean());
 })
 
-gulp.task('jshint', ['clean'], function () {
+gulp.task('jshint', function () {
   return gulp
     .src('src/assets/js/**/*.js')
     .pipe(jshint())
@@ -23,7 +23,7 @@ gulp.task('jshint', ['clean'], function () {
     .pipe(gulp.dest('public/assets/js/'))
 })
 
-gulp.task('copyCSS', ['clean', 'less'], function () {
+gulp.task('copyCSS', ['less'], function () {
   return gulp.src('src/assets/css/*.css')
     .pipe(prefix({
       browsers: ['last 2 versions'],
@@ -41,14 +41,14 @@ gulp.task('less', function () {
 })
 
 
-gulp.task('fileinclude', ['clean'], function () {
+gulp.task('fileinclude', function () {
   return gulp
     .src('src/index.html')
     .pipe(fileinclude())
     .pipe(gulp.dest('public/'));
 })
 
-gulp.task('imageMin', ['clean'], function () {
+gulp.task('imageMin', function () {
   return gulp
     .src('src/assets/img/*.*')
     .pipe(gulp.dest('public/assets/img'));
