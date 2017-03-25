@@ -24,7 +24,7 @@ gulp.task('jshint', function () {
 })
 
 gulp.task('copyCSS', ['less'], function () {
-  return gulp.src('src/assets/css/*.css')
+  return gulp.src(['src/assets/css/*.css', 'src/assets/css/teenytinycss/*.css'])
     .pipe(prefix({
       browsers: ['last 2 versions'],
       cascade: false
