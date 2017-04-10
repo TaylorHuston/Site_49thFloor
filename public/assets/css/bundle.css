@@ -66,10 +66,6 @@
     transition: all ease .3s;
   }
 
-  nav.expand {
-    right: 0;
-  }
-
   nav ul {
     margin: 0;
     padding: 0;
@@ -96,6 +92,10 @@
     border-bottom-style: solid;
     border-bottom-width: 1px;
     transition: all ease .3s;
+  }
+
+  nav.expand {
+    right: 0;
   }
 
   .container {

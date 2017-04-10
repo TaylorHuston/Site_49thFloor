@@ -58,9 +58,6 @@
     text-align: center;
     transition: all ease .3s;
   }
-  nav.expand {
-    right: 0;
-  }
   nav ul {
     margin: 0;
     padding: 0;
@@ -86,6 +83,9 @@
     border-bottom-width: 1px;
     -webkit-transition: all ease .3s;
     transition: all ease .3s;
+  }
+  nav.expand {
+    right: 0;
   }
   .container {
     position: relative;
