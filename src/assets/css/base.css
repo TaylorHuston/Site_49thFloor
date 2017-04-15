@@ -13,18 +13,19 @@
     font-size: 16px;
   }
   #headline {
-    flex: 1 1 auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: block;
-    height: 50px;
-    padding: 10px 0 0 15px;
+    padding: 10px 15px;
     font-weight: bold;
     text-align: left;
     font-size: 26px;
   }
   #hamburger {
-    position: fixed;
+    float: right;
     left: auto;
-    top: 5px;
+    top: 10px;
     right: 5px;
     width: 50px;
     height: 50px;
@@ -46,7 +47,7 @@
   }
   nav {
     position: fixed;
-    top: 0;
+    top: 50px;
     left: auto;
     right: -100%;
     z-index: 200;
@@ -79,9 +80,6 @@
     font-weight: bold;
     text-decoration: none;
     font-size: 18px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    -webkit-transition: all ease .3s;
     transition: all ease .3s;
   }
   nav.expand {
@@ -89,7 +87,12 @@
   }
   .container {
     position: relative;
-    top: 60px;
+    top: 50px;
+    left: 0px;
+    transition: all ease .3s;
+  }
+  .move {
+    left: -100%;
   }
   section {
     position: relative;
@@ -99,6 +102,10 @@
   }
   .center {
     max-width: 1200px;
+    margin: 0 auto;
+  }
+  .sectionTitle {
+    max-width: 950px;
     margin: 0 auto;
   }
   p {
@@ -166,7 +173,7 @@
     box-shadow: 0 0 20px 5px #212121;
   }
 }
-@media all and (min-width: 695px) {
+@media all and (min-width: 600px) {
   section {
     position: relative;
     z-index: 100;
@@ -178,6 +185,12 @@
   }
   #tagline h2 {
     font-size: 4vw;
+  }
+  nav {
+    right: -600px;
+  }
+  .move {
+    left: -600px;
   }
 }
 @media all and (min-width: 1200px) {
