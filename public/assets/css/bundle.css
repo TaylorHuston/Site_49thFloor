@@ -19,7 +19,7 @@
     max-width: 1000px;
     margin: 0 auto;
     display: block;
-    padding: 10px 15px;
+    padding: 12px 10px;
     font-weight: bold;
     text-align: left;
     font-size: 26px;
@@ -39,8 +39,8 @@
   #hamburger span {
     display: block;
     width: 40px;
-    height: 5px;
-    margin: 7px auto;
+    height: 4px;
+    margin: 6px auto;
     border-radius: 5px;
   }
 
@@ -53,9 +53,9 @@
 
   nav {
     position: fixed;
-    top: 50px;
     left: auto;
     right: -100%;
+    top: 60px;
     z-index: 200;
     margin: 0;
     padding: 0;
@@ -94,6 +94,7 @@
 
   nav.expand {
     right: 0;
+    top: 60px;
   }
 
   .container {
@@ -101,10 +102,6 @@
     top: 50px;
     left: 0px;
     transition: all ease .3s;
-  }
-
-  .move {
-    left: -100%;
   }
 
   section {
@@ -217,11 +214,8 @@
   }
 
   nav {
-    right: -600px;
-  }
-
-  .move {
-    left: -600px;
+    right: -400px;
+    width: 400px;
   }
 }
 
@@ -248,7 +242,7 @@ html {
 }
 
 nav {
-  background-color: #ffffff;
+  background-color: #212121;
 }
 
 #topBar {
@@ -271,6 +265,11 @@ nav ul li a {
 
 #tagline {
   color: #e6e6e6;
+}
+
+#about,
+#services {
+  background-image: url("../img/dust.png");
 }
 
 #philosophy {

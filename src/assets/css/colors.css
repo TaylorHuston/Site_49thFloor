@@ -4,7 +4,7 @@ html {
   background-color: #212121;
 }
 nav {
-  background-color: #ffffff;
+  background-color: #212121;
 }
 #topBar {
   color: #e6e6e6;
@@ -22,6 +22,10 @@ nav ul li a {
 }
 #tagline {
   color: #e6e6e6;
+}
+#about,
+#services {
+  background-image: url('../img/dust.png');
 }
 #philosophy {
   background-image: url('../img/dustGrey.png');

@@ -17,7 +17,7 @@
       max-width: 1000px;
       margin: 0 auto;
       display: block;
-      padding: 10px 15px;
+      padding: 12px 10px;
       font-weight: bold;
       text-align: left;
       font-size: 26px;
@@ -35,8 +35,8 @@
     #hamburger span {
       display: block;
       width: 40px;
-      height: 5px;
-      margin: 7px auto;
+      height: 4px;
+      margin: 6px auto;
       border-radius: 5px;
     }
     header {
@@ -47,9 +47,9 @@
     }
     nav {
       position: fixed;
-      top: 50px;
       left: auto;
       right: -100%;
+      top: 60px;
       z-index: 200;
       margin: 0;
       padding: 0;
@@ -84,6 +84,7 @@
     }
     nav.expand {
       right: 0;
+      top: 60px;
     }
     .container {
       position: relative;
@@ -92,7 +93,7 @@
       transition: all ease .3s;
     }
     .move {
-      left: -100%;
+      //      left: -100%;
     }
     section {
       position: relative;
@@ -190,10 +191,11 @@
       }
     }
     nav {
-      right: -600px
+      right: -400px;
+      width: 400px;
     }
     .move {
-      left: -600px;
+      //      left: -600px;
     }
   }
   
