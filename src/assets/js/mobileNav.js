@@ -14,9 +14,11 @@ $('a[href^="#"]').on('click', function (event) {
 $('#hamburger').click(function () {
   $('nav').toggleClass('expand');
   $('.container').toggleClass('move');
+  $('#overlay').toggleClass('darken');
 });
 
 $('nav').click(function () {
   $('nav').toggleClass('expand');
   $('.container').toggleClass('move');
+  $('#overlay').toggleClass('darken');
 });

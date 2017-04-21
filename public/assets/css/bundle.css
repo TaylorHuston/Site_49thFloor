@@ -104,6 +104,14 @@
     transition: all ease .3s;
   }
 
+  #overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    transition: all ease .3s;
+  }
+
   section {
     position: relative;
     z-index: 100;
@@ -257,6 +265,10 @@ nav {
 nav ul li a {
   color: #e6e6e6;
   background-color: #212121;
+}
+
+.darken {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #start {

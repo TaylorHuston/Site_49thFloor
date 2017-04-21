@@ -17,6 +17,9 @@ nav ul li a {
   color: #e6e6e6;
   background-color: #212121;
 }
+.darken {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 #start {
   background-image: url('../img/background-light-texture.jpg');
 }
