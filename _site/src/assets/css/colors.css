@@ -1,0 +1,51 @@
+body,
+html {
+  color: #333333;
+  background-color: #212121;
+}
+nav {
+  background-color: #212121;
+}
+#topBar {
+  color: #e6e6e6;
+  background-color: #212121;
+}
+#hamburger span {
+  background-color: white;
+}
+nav ul li a {
+  color: #e6e6e6;
+  background-color: #212121;
+}
+.darken {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#start {
+  background-image: url('../img/background-light-texture.jpg');
+}
+#tagline {
+  color: #e6e6e6;
+}
+#about,
+#services {
+  background-image: url('../img/dust.png');
+}
+#philosophy {
+  background-image: url('../img/dustGrey.png');
+  color: #e6e6e6;
+}
+#contact {
+  background-image: url('../img/dustGrey.png');
+  color: #e6e6e6;
+}
+#footer {
+  background-image: url('../img/background-light-texture.jpg');
+  color: #e6e6e6;
+}
+@media (min-width: 595px) {
+  nav ul li a:hover {
+    background-color: #944747;
+    color: #ffffff;
+    border-bottom-color: #c15c5c;
+  }
+}
